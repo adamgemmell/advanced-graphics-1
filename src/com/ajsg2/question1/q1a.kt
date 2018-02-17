@@ -66,7 +66,7 @@ fun main(args: Array<String>) {
     // Set up data
 
     // Set up float buffer
-    val coords = floatArrayOf(-0.5f, -0.5f, 0f, 0f, 0.0f, 0f, 0.5f, -0.5f, 0f)
+    val coords: FloatArray = floatArrayOf(-0.5f, -0.5f, 0f, 0f, 0.0f, 0f, 0.5f, -0.5f, 0f)
     val fbo = BufferUtils.createFloatBuffer(coords.size)
     fbo.put(coords)
     fbo.flip()      // Mark ready for read
@@ -102,8 +102,4 @@ fun main(args: Array<String>) {
     GLFW.glfwDestroyWindow(window)
     GLFW.glfwTerminate()
     GLFW.glfwSetErrorCallback(null).free()
-}
-
-fun triangle(){
-
 }
